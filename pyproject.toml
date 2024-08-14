@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "docx-to-pdf-api"
+version = "0.1.0"
+description = "Utilities API for converting .docx file to .pdf file"
+authors = ["MuzaffarShaikh0201 <muzaffarshaikh0201@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.112.0"
+python-dotenv = "^1.0.1"
+coloredlogs = "^15.0.1"
+uvicorn = "^0.30.6"
+pydantic-settings = "^2.4.0"
+pyyaml = "^6.0.2"
+email-validator = "^2.2.0"
+
+[tool.poetry.scripts]
+api = "src.cli:run"
+dev = "src.cli:local"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
